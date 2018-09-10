@@ -1,7 +1,12 @@
 /* eslint-disable  func-names */
 /* eslint-disable  no-console */
 
+
+
 const Alexa = require('ask-sdk-core');
+const factArr = require('./animal-facts.js')
+
+console.log(factArr[0].fact + ' ' + factArr[0].image);
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
