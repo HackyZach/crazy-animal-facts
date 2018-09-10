@@ -6,14 +6,16 @@
 const Alexa = require('ask-sdk-core');
 const factArr = require('./animal-facts.js')
 
-console.log(factArr[0].fact + ' ' + factArr[0].image);
+let randomNum = (arr) => Math.floor(Math.random() * arr.length);
+
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    const speechText = 'Welcome to the Alexa Skills Kit, you can say hello!';
+    let animal = randomNum(factArr);
+    const speechText = factArr[animal].fact;
 
     return handlerInput.responseBuilder
       .speak(speechText)
