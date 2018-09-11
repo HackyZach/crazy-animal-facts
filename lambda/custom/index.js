@@ -20,7 +20,7 @@ const LaunchRequestHandler = {
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withSimpleCard('Hello World', speechText)
+      .withStandardCard('Crazy Animal Fact', speechText, 'https://s3.amazonaws.com/crazy-animal-facts-pics/penguins-56097_1280.jpg')
       .getResponse();
   },
 };
