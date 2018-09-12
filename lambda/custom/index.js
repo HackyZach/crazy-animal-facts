@@ -1,26 +1,26 @@
 /* eslint-disable  func-names */
 /* eslint-disable  no-console */
 
-
-
 const Alexa = require('ask-sdk-core');
 const factArr = require('./animal-facts.js')
 
 let randomNum = (arr) => Math.floor(Math.random() * arr.length);
-
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
   },
   handle(handlerInput) {
-    let animal = randomNum(factArr);
+    const animal = randomNum(factArr);
+    const cardTitle = factArr[animal].animalName + ' Fact'; 
     const speechText = factArr[animal].fact;
+    const smallImageURL = factArr[animal].smallImageURL;
+    const largeImageURL = factArr[animal].largeImageURL;
 
     return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
-      .withStandardCard('Crazy Animal Fact', speechText, 'https://s3.amazonaws.com/crazy-animal-facts-pics/penguins-56097_1280.jpg')
+      .withStandardCard(cardTitle, speechText, smallImageURL, largeImageURL)
       .getResponse();
   },
 };
