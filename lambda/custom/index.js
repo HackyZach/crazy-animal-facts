@@ -6,7 +6,7 @@ const factArr = require('./animal-facts.js')
 
 let randomNum = (arr) => Math.floor(Math.random() * arr.length);
 
-const LaunchRequestHandler = {
+const LaunchRequestAndRandomFactHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'LaunchRequest' ||
            (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
@@ -26,27 +26,13 @@ const LaunchRequestHandler = {
   },
 };
 
-const HelloWorldIntentHandler = {
-  canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'IntentRequest'
-      && handlerInput.requestEnvelope.request.intent.name === 'HelloWorldIntent';
-  },
-  handle(handlerInput) {
-    const speechText = 'Hello World!';
-
-    return handlerInput.responseBuilder
-      .speak(speechText)
-      .getResponse();
-  },
-};
-
 const HelpIntentHandler = {
   canHandle(handlerInput) {
     return handlerInput.requestEnvelope.request.type === 'IntentRequest'
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
-    const speechText = 'You can say hello to me!';
+    const speechText = 'You can ask me for a fact and I will tell you something amazing!';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -100,8 +86,7 @@ const skillBuilder = Alexa.SkillBuilders.custom();
 
 exports.handler = skillBuilder
   .addRequestHandlers(
-    LaunchRequestHandler,
-    HelloWorldIntentHandler,
+    LaunchRequestAndRandomFactHandler,
     HelpIntentHandler,
     CancelAndStopIntentHandler,
     SessionEndedRequestHandler
