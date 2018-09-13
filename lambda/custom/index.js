@@ -8,7 +8,9 @@ let randomNum = (arr) => Math.floor(Math.random() * arr.length);
 
 const LaunchRequestHandler = {
   canHandle(handlerInput) {
-    return handlerInput.requestEnvelope.request.type === 'LaunchRequest';
+    return handlerInput.requestEnvelope.request.type === 'LaunchRequest' ||
+           (handlerInput.requestEnvelope.request.type === 'IntentRequest' &&
+            handlerInput.requestEnvelope.request.intent.name === 'RandomFactIntent');
   },
   handle(handlerInput) {
     const animal = randomNum(factArr);
@@ -19,7 +21,6 @@ const LaunchRequestHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .reprompt(speechText)
       .withStandardCard(cardTitle, speechText, smallImageURL, largeImageURL)
       .getResponse();
   },
@@ -35,7 +36,6 @@ const HelloWorldIntentHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
       .getResponse();
   },
 };
@@ -67,7 +67,6 @@ const CancelAndStopIntentHandler = {
 
     return handlerInput.responseBuilder
       .speak(speechText)
-      .withSimpleCard('Hello World', speechText)
       .getResponse();
   },
 };

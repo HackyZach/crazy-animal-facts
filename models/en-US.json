@@ -25,14 +25,18 @@
           ]
         },
         {
-          "name": "HelloWorldIntent",
+          "name": "RandomFactIntent",
           "slots": [
 
           ],
           "samples": [
-            "hello",
-            "say hello",
-            "say hello world"
+            "fact",
+            "for a fact",
+            "to provide a fact",
+            "inform me",
+            "teach me",
+            "tell me a crazy fact"
+
           ]
         }
       ]
