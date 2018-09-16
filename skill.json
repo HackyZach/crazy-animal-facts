@@ -9,7 +9,7 @@
             "Alexa tell hello world hello",
             "Alexa ask hello world say hello"
           ],
-          "name": "wildlife_random_facts",
+          "name": "Crazy Animal Facts",
           "description": "Sample Full Description"
         }
       },
