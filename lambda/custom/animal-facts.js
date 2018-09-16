@@ -15,7 +15,7 @@ module.exports = [
         "photoCredit": "Bluesnap"
     },
     {
-        "fact": "Elephants are the only land mammal that can't jump.",
+        "fact": "Elephants are the only land mammal that can't jump!",
         "animalName": "Elephant",
         "largeImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/elephant-ludi_1_1200x800.jpg",
         "smallImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/elephant-ludi_720x480.jpg",
@@ -29,7 +29,7 @@ module.exports = [
         "photoCredit": "Kapa65"
     },
     {
-        "fact": "Giraffes do not possess vocal cords.",
+        "fact": "Giraffes do not possess vocal cords!",
         "animalName": "Giraffes",
         "largeImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/giraffes-hbieser_1_1200x800.jpg",
         "smallImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/giraffes-hbieser_720x480.jpg",
@@ -43,7 +43,7 @@ module.exports = [
         "photoCredit": "skeeze"
     },
     {
-        "fact": "Penguins can drink sea water.",
+        "fact": "Penguins can drink sea water!",
         "animalName": "Penguin",
         "largeImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/penguins-derdento_1_1200x800.jpg",
         "smallImageURL": "https://s3.amazonaws.com/crazy-animal-facts-pics/penguins-derdento_720x480.jpg",
