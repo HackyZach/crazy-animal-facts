@@ -8,7 +8,6 @@ If you wish to rate the skill, you can do so [here](https://www.amazon.com/Zacha
 
 Here's an example (from my phone):
 <p align="center">
-<img src="./.github/cat-fact2.png">
+<img src="./.github/cat-fact.png">
 </p>
-
 <!-- ![cat-fact example](./.github/cat-fact2.png) -->
