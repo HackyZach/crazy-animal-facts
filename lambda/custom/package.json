@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "ask-sdk-core": "^2.0.0",
+<<<<<<< HEAD
+=======
+    "ask-sdk-dynamodb-persistence-adapter": "^2.8.0",
+>>>>>>> 0d45fcdc095bcf49b0a63fa4fd89737c43091362
     "ask-sdk-model": "^1.0.0"
   }
 }
