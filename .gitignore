@@ -1,1 +1,3 @@
 /lambda/custom/node_modules/
+# https://stackoverflow.com/questions/6030530/git-ignore-not-working-in-a-directory
+.ask/config 
