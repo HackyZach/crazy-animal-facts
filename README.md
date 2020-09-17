@@ -7,4 +7,7 @@ To invoke this Alexa skill, all you have to say is:
 If you wish to rate the skill, you can do so [here](https://www.amazon.com/Zachary-Owen-Crazy-Animal-Facts/dp/B07KG12D9P/ref=sr_1_1?keywords=crazy+animal+facts&qid=1584012676&s=digital-skills&sr=1-1). All feedback is welcome.
 
 Here's an example (from my phone):
-![cat-fact example](./.github/cat-fact.png)
+
+<div align="center">
+<img width="50%" height="50%" src="./.github/cat-fact.png">
+</div>
